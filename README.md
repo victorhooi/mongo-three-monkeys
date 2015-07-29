@@ -10,6 +10,7 @@ It currently writes the output to `STDOUT`.
 ## What It Removes
 
 The tool currently performs the following:
+
 1. Replace any strings in double-quotes with a SHA1 digest of the contents. This is not currently salted (but this is on the TODO)
 1. Remove any fieldnames (`field_name:) or MongoDB namespaces (`database.collection`), and replace them with another word chosen from a dictionary, based on a FNV hash of the word.
 1. Remove any occurrences of ``<database_name>.$cmd`.
