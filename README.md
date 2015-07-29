@@ -13,11 +13,11 @@ The tool currently performs the following:
 
 1. Replace any strings in double-quotes with a SHA1 digest of the contents. This is not currently salted (but this is on the TODO)
 1. Remove any fieldnames (`field_name:`) or MongoDB namespaces (`database.collection`), and replace them with another word chosen from a dictionary, based on a FNV hash of the word.
-1. Remove any occurrences of ``<database_name>.$cmd`.
+1. Remove any occurrences of `<database_name>.$cmd`.
 1. Remove any words contained in a blacklist file, and replace them with `XXXX`.
 1. Anonymise any IP addresses, using the [Crypto-PAn algorithm](http://www.cc.gatech.edu/computing/Telecomm/projects/cryptopan/). Note that this currently uses a hard-coded key - however, we will add functionality to supply your own key in the future.
 
-Please note that unlike IP addresses, hostnames are not explicitly removed - it is suggested that these be added to the blacklist if these are sensitive. (See also #1)
+Please note that unlike IP addresses, hostnames are not explicitly removed - it is suggested that these be added to the blacklist if these are sensitive. (See also https://github.com/victorhooi/mongo-three-monkeys/issues/1)
 
 ## Usage
 To run it:
@@ -40,4 +40,4 @@ The blacklist should be a list of words, one per line, that you want completely 
 
 ## Questions
 
-For any questions, please file an issue, or email me at victor@
+For any questions, please file an issue.
